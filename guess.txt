@@ -1,0 +1,7 @@
+start guess number50 is lower. Chance left : 6
+75 is lower. Chance left : 5
+88 is lower. Chance left : 4
+94 is bigger. Chance left : 3
+91 is lower. Chance left : 2
+92 is lower. Chance left : 1
+You win. Answer is 93

@@ -11,6 +11,7 @@ if __name__ == "__main__":
 
     node = TreeNode()
     node.data = numbers[0]
+
     root = node
 
     for group in numbers[1:]:
@@ -50,4 +51,38 @@ if __name__ == "__main__":
             current = current.right
 
 
+delete_group = input()
 
+current = root
+parant = root
+while True:
+    if delete_group == current.data:
+
+        if current.left == None and current.right == None:
+            if parant.left == current:
+                parant.left = None
+            elif parant.right == current:
+                parant.right = None
+            del current
+            break
+        elif current.left == None and current.right != None:
+            if parant.left == current:
+                parant.left = current.right
+            elif parant.right == current:
+                parant.right = current.right
+            del current
+            break
+        elif current.left != None and current.right == None:
+            if parant.left == current:
+                parant.left = current.left
+            elif parant.right == current:
+                parant.right = current.left
+            del current
+            break
+        # elif current.left != None and current.right != None:
+        #     if parant.left == current:
+        #         parant.left = current.left
+        #     elif parant.right == current:
+        #         parant.right = current.left
+
+    elif delete_group < current.data:
